@@ -115,10 +115,6 @@ namespace Ksiegarnia
                 { book.availabilty = 0;}
                 else if(book.id == id_wypozyczanej && book.availabilty == 0)
                 { Console.WriteLine("Book already taken!"); }
-                else
-                { Console.WriteLine("We dont have that book!");
-                  System.Environment.Exit(1);
-                }
             }
         }
         private static void Wypozycz2(List<Klient> clients)
@@ -134,8 +130,6 @@ namespace Ksiegarnia
                 { Console.WriteLine("We dont have that book!"); }
                 else if (klient.id == id_wypozyczajacego)
                 { klient.id_ks = id_wypozyczanej; }
-                else
-                { Console.WriteLine("We dont have that customer!"); }
             }
         }
         private static void Oddaj(List<Book> books)
@@ -149,10 +143,6 @@ namespace Ksiegarnia
                 { book.availabilty = 1; }
                 else if(book.id == id_wypozyczanej && book.availabilty == 1)
                 { Console.WriteLine("Book is available!"); }
-                else
-                { Console.WriteLine("We dont have that book!");
-                  System.Environment.Exit(1);
-                }
             }
         }
         private static void Oddaj2(List<Klient> clients)
@@ -164,8 +154,6 @@ namespace Ksiegarnia
             {
                 if (klient.id == id_wypozyczajacego)
                 { klient.id_ks = 0; }
-                else
-                { Console.WriteLine("We dont have that client!"); }
             }
         }
         private static void WyswietlDostepne(List<Book> books)
